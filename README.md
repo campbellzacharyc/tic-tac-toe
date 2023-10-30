@@ -1,1 +1,1 @@
-# tic-tac-toe
+This project is a tic tac toe game made using JavaScript. It is part of The Odin Project cirriculum. 

@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: chalkduster;
+}
+
+.gameboard {
+    text-align: center;
+}
+
+.controls {
+    text-align: center;
+}
+
+input {
+    font-family: chalkduster;
+}
+
+::placeholder {
+    color: black;
+    font-family: chalkduster;
+}
+
+button {
+    font-family: chalkduster;
+}
