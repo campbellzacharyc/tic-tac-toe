@@ -9,7 +9,21 @@ h1 {
 }
 
 .gameboard {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.square {
+    border: solid black 2px;
+    width: 25%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
 }
 
 .controls {
