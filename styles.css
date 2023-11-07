@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: black;
 }
 
 h1 {
@@ -17,16 +17,18 @@ h1 {
 }
 
 .square {
-    border: solid black 2px;
+    border: solid white 2px;
     width: 25%;
     height: 50%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center; 
+    color: white;
 }
 
 .controls {
+    margin-top: 200px;
     text-align: center;
 }
 
@@ -41,4 +43,11 @@ input {
 
 button {
     font-family: chalkduster;
+}
+
+.message {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
 }

@@ -56,11 +56,15 @@ const Game = (() => {
         ] 
         currentPlayerIndex = 0;
         gameOver = false;
+        for (let i = 0; i < 9; i++) {
+            Gameboard.update(i, "");
+        }
         Gameboard.render();
         const squares = document.querySelectorAll(".square");
         squares.forEach((square) => {
             square.addEventListener("click", handleClick);
         })
+        document.querySelector(".message").innerHTML = "";
     };
 
     const handleClick = (event) => {
@@ -74,7 +78,7 @@ const Game = (() => {
 
         if (checkForWin(Gameboard.getGameboard(), players[currentPlayerIndex].mark)) {
             gameOver = true;
-            displayController.renderMessage(`${players[currentPlayerIndex].name} wins`);
+            displayController.renderMessage(`${players[currentPlayerIndex].name} wins!!`);
         } else if (checkForTie(Gameboard.getGameboard())) {
             gameOver = true;
             displayController.renderMessage("It's a tie!");
@@ -84,18 +88,8 @@ const Game = (() => {
     
     };
 
-    const restart = () => {
-        for (let i = 0; i < 9; i++) {
-            Gameboard.update(i, "");
-        }
-        Gameboard.render();
-        gameOver = false;
-        document.querySelector(".message").innerHTML = "";
-    };
-
     return {
         start,          
-        restart,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          bv
         handleClick
     }
 })();
@@ -123,11 +117,6 @@ function checkForWin(board) {
 function checkForTie(board) {
     return board.every(cell => cell !== "")
 }
-
-const restartButton = document.querySelector(".restart");
-restartButton.addEventListener("click", () => {
-    Game.restart();
-})
 
 const start = document.querySelector(".start");
 start.addEventListener("click", () => {
